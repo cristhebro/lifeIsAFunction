@@ -7,14 +7,14 @@ print("Our first function will be the function of a circle:\n")
 
 #Function to calculate area of circle... A = pi * r**2
 def area_of_circle(radius):
-    circle_area = math.pi * radius**2
+    circle_area = math.pi * float(radius)**2
     return circle_area
 #Assigning radius input values to test
-radius1 = 10
-radius2 = 6
-radius3 = 24
-radius4 = 2
-radius5 = 1
+radius1 = input("Enter the radius of circle1: \n")
+radius2 = input("Enter the radius of circle2: \n")
+radius3 = input("Enter the radius of circle3: \n")
+radius4 = input("Enter the radius of circle4: \n")
+radius5 = input("Enter the radius of circle5: \n")
 
 #Running function with given radii
 area1 = area_of_circle(radius1)
@@ -37,18 +37,16 @@ print("Our second function will calculate tax and add it to our subtotal to prov
 
 #Calculating total after taxes by adding the product of our money and tax rate to the original money value
 def tax_total(money, tax_rate):
-    complete_total = money + (money * tax_rate)
+    complete_total = float(money) + (float(money) * (float(tax_rate) / 100))
     return complete_total
 
-#Assigning values for our first parameter: money
-money1 = 20
-money2 = 54
-money3 = 68
-
-#Assigning values for our second parameter: tax_rate
-tax_rate1 = 6/100
-tax_rate2 = 4/100
-tax_rate3 = 8/100
+#Assigning values for our first parameter: money and second parameter: tax_rate
+money1 = input("Enter the amount of money from subtotal1: \n")
+tax_rate1 = input("Enter the tax rate from subtotal1: \n")
+money2 = input("Enter the amount of money from subtotal2: \n")
+tax_rate2 = input("Enter the tax rate from subtotal2: \n")
+money3 = input("Enter the amount of money from subtotal3: \n")
+tax_rate3 = input("Enter the tax rate from subtotal3: \n")
 
 #Running function and assigning return values to total variables
 total1 = tax_total(money1, tax_rate1)
@@ -67,15 +65,15 @@ print("Our last function will convert temperature from Fahrenheit to Celsius..."
 
 #Function that calculates temperature from fahrenheit to celsius
 def f_to_c(temp_f):
-    temp_c = (temp_f - 32) * (5 / 9)
+    temp_c = (float(temp_f) - 32) * (5 / 9)
     return temp_c
 
 #Assigning Fahrenheit temperatures to variables
 
-tempF1 = 32
-tempF2 = 80
-tempF3 = 73
-tempF4 = 42
+tempF1 = input("Enter your first temperature in degress Fahrenheit: \n")
+tempF2 = input("Enter your second temperature in degress Fahrenheit: \n")
+tempF3 = input("Enter your third temperature in degress Fahrenheit: \n")
+tempF4 = input("Enter your fourth temperature in degress Fahrenheit: \n")
 
 #Assigning function return values to variable for printing
 
